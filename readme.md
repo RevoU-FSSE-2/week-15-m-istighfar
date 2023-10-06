@@ -7,9 +7,12 @@ W16 is an Express.js API server with a focus on security. The server comes equip
 
 BE = [https://real-erin-greyhound-yoke.cyclic.app/](https://real-erin-greyhound-yoke.cyclic.app/)
 
-FE ClientX = [https://w-15-clientx.netlify.app/](https://w-15-clientx.netlify.app/)
+FE ClientX = [https://w-15-clientx.netlify.app/](https://w-15-clientx.netlify.app/) 
+Repo : [https://github.com/m-istighfar/w-15-clientx](https://github.com/m-istighfar/w-15-clientx)
 
-Fe ClientY = [https://w-15-clienty.netlify.app/](https://w-15-clienty.netlify.app/)
+
+FE ClientY = [https://w-15-clienty.netlify.app/](https://w-15-clienty.netlify.app/)
+Repo : [https://github.com/m-istighfar/w-15-clienty](https://github.com/m-istighfar/w-15-clienty)
 
 ## Table of Contents
 - [Setup and Installation](#setup-and-installation)
