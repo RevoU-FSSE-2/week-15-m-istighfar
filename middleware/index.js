@@ -6,7 +6,7 @@ const applyMorgan = require("./morgan");
 
 module.exports = (app) => {
   applyMorgan(app);
-  applyHelmet(app);
+
   applyCors(app);
   applyBodyParser(app);
   applyRequestIdMiddleware(app);

@@ -1,25 +1,20 @@
 const cors = require("cors");
 
 module.exports = (app) => {
-  const whitelist = [
-    "https://w-15-clientx.netlify.app",
-    "https://w-15-clienty.netlify.app",
+  const allowedOrigins = [
+    "http://localhost:5173",
+    "https://clinquant-nougat-f52198.netlify.app",
   ];
-  const corsOptionsDelegate = (req, callback) => {
-    let corsOptions;
-    if (whitelist.indexOf(req.header("Origin")) !== -1) {
-      corsOptions = {
-        origin: true,
-        methods:
-          req.header("Origin") === "https://w-15-clientx.netlify.app"
-            ? ["GET", "POST"]
-            : ["GET", "POST", "PUT", "DELETE"],
-      };
-    } else {
-      corsOptions = { origin: false };
-    }
-    callback(null, corsOptions);
+
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
   };
 
-  app.use(cors(corsOptionsDelegate));
+  app.use(cors(corsOptions));
 };
